@@ -1,0 +1,460 @@
+/* General styles for body and header */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background for all pages */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo {
+    max-width: 250px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Styles specific to homepage (index.html) */
+.hero {
+    background-color: #ff5733; /* Orange background color for the hero section */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #ff5733;
+    border: none;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+.featured {
+    background-color: #fff;
+    padding: 40px 20px;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-item h3 {
+    margin: 10px 0;
+}
+
+.product-item .btn {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-item .btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Styles specific to about page (about.html) */
+.about-intro {
+    background-color: #ffebcd; /* Light color background for intro section */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.about-intro h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.about-intro p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.about-story {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin: 20px 0;
+}
+
+.about-story h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about-story p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.about-team {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+}
+
+.about-team h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 250px;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.team-member h3 {
+    margin: 10px 0 5px;
+}
+
+.team-member p {
+    color: #555;
+}
+
+/* Styles specific to contact page (contact.html) */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: #fff; /* White background for the contact section */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container form,
+.contact-container .contact-info {
+    flex: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.contact-container form {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-container form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact-container form input,
+.contact-container form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container form button {
+    background-color: #ff5733;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-container form button:hover {
+    background-color: #e74c3c;
+}
+
+.contact-container .contact-info h2 {
+    margin-top: 0;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+footer form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+footer input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 14px;
+    width: 50%; /* Make the input take up half the screen width */
+    max-width: 400px; /* Limit the maximum width */
+}
+
+footer button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff5733;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+footer button[type="submit"]:hover {
+    background-color: #e74c3c;
+}
+
+/* Product Page Styles */
+.product-intro {
+    background-color: #ffebcd;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-intro h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.product-intro p {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.product-item:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+}
+
+.product-info p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
+
+.product-info .rating {
+    font-size: 1.1em;
+    color: #ff9900;
+}
+
+.product-info .btn {
+    background-color: #ff5733;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-info .btn:hover {
+    background-color: #e74c3c;
+}
+
+.product-info .buy-now {
+    background-color: #28a745; /* Green color for Buy Now button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.product-info .buy-now:hover {
+    background-color: #218838;
+}
+.hero {
+    background-color: #ff5733; /* Orange background color for the hero section */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.hero-photo {
+    width: 300px; /* Adjust the width as needed */
+    height: auto;
+    position: absolute;
+}
+
+.hero-photo.left {
+    left: 0;
+}
+
+.hero-photo.right {
+    right: 0;
+}
+
+.hero-text {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+}
+
+.cta-button {
+    background-color: #fff;
+    color: #ff5733;
+    border: none;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #e74c3c;
+    color: #fff;
+}
+
+

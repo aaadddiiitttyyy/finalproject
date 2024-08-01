@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Sneakers Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styles for the modal overlay */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4); /* Black background with opacity */
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Additional styles for product grid */
+        .product-item {
+            position: relative;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+        }
+
+        .product-item .btn,
+        .product-item .buy-now {
+            display: inline-block;
+            background-color: #ff5733;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .product-item .btn:hover,
+        .product-item .buy-now:hover {
+            background-color: #e74c3c;
+        }
+
+        .rating {
+            margin: 10px 0;
+        }
+
+        .rating span {
+            font-size: 1.2em;
+            color: #ffcc00;
+        }
+
+        .buy-now {
+            background-color: #28a745;
+        }
+
+        .buy-now:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logoo.png" alt="Sneakers Store Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="product-intro">
+            <h1>Our Sneakers Collection</h1>
+            <p>Explore our latest collection of sneakers designed for comfort and style. Whether you're hitting the gym or the streets, we have the perfect pair for you.</p>
+        </section>
+        <section class="product-grid">
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="red.png" alt="Sneaker Model 1">
+                </div>
+                <div class="product-info">
+                    <h3>Nike SB Dunk</h3>
+                    <p>$99.99</p>
+                    <div class="rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span> <!-- 4 stars out of 5 -->
+                    </div>
+                    <a href="#" class="btn" onclick="showModal('modal1')">View Details</a>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="retro4.jpeg" alt="Sneaker Model 2">
+                </div>
+                <div class="product-info">
+                    <h3>Jordan Retro 4</h3>
+                    <p>$109.99</p>
+                    <div class="rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 stars out of 5 -->
+                    </div>
+                    <a href="#" class="btn" onclick="showModal('modal2')">View Details</a>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="sneaker3.jpg" alt="Sneaker Model 3">
+                </div>
+                <div class="product-info">
+                    <h3>Jordan Flight Red</h3>
+                    <p>$119.99</p>
+                    <div class="rating">
+                        <span>&#9733;&#9733;&#9733;&#9734;&#9734;</span> <!-- 3 stars out of 5 -->
+                    </div>
+                    <a href="#" class="btn" onclick="showModal('modal3')">View Details</a>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="product-image">
+                    <img src="sneaker4.jpg" alt="Sneaker Model 4">
+                </div>
+                <div class="product-info">
+                    <h3>Nike Jordan 1</h3>
+                    <p>$129.99</p>
+                    <div class="rating">
+                        <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span> <!-- 5 stars out of 5 -->
+                    </div>
+                    <a href="#" class="btn" onclick="showModal('modal4')">View Details</a>
+                    <a href="#" class="buy-now">Buy Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal 1 -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Nike SB Dunk</h2>
+                <p><strong>Price:</strong> $99.99</p>
+                <p><strong>Color:</strong> Red</p>
+                <p><strong>Material:</strong> Leather</p>
+                <p><strong>Size Range:</strong> 7-12</p>
+                <p><strong>Available Stock:</strong> 50</p>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Jordan Retro 4</h2>
+                <p><strong>Price:</strong> $109.99</p>
+                <p><strong>Color:</strong> Black/White</p>
+                <p><strong>Material:</strong> Suede</p>
+                <p><strong>Size Range:</strong> 8-13</p>
+                <p><strong>Available Stock:</strong> 30</p>
+            </div>
+        </div>
+
+        <!-- Modal 3 -->
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Jordan Flight Red</h2>
+                <p><strong>Price:</strong> $119.99</p>
+                <p><strong>Color:</strong> Blue</p>
+                <p><strong>Material:</strong> Mesh</p>
+                <p><strong>Size Range:</strong> 7-11</p>
+                <p><strong>Available Stock:</strong> 40</p>
+            </div>
+        </div>
+
+        <!-- Modal 4 -->
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Nike Jordan 1</h2>
+                <p><strong>Price:</strong> $129.99</p>
+                <p><strong>Color:</strong> Green</p>
+                <p><strong>Material:</strong> Synthetic</p>
+                <p><strong>Size Range:</strong> 8-12</p>
+                <p><strong>Available Stock:</strong> 25</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Sneakers Store. All rights reserved.</p>
+        <form action="contact.html">
+            <input type="email" placeholder="Subscribe to our newsletter">
+            <button type="submit">Subscribe</button>
+        </form>
+    </footer>
+    <script>
+        // Function to show modal
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+        }
+
+        // Function to close modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close the modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+</html>
